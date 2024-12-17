@@ -264,7 +264,7 @@
         "valueType":"string",
         "name":"classes",
         "value":"",
-        "label":"Fragment Style",
+        "label":"Experience Fragment Style",
         "options": [
           {
             "name": "Color",
