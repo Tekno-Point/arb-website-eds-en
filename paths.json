@@ -2,7 +2,8 @@
   "mappings": [
     "/content/arb-blogs/:/",
     "/content/arb-blogs/configuration:/.helix/config.json",
-    "/content/arb-blogs/metadata:/metadata.json"
+    "/content/arb-blogs/metadata:/metadata.json",
+    "/content/arb-blogs/redirects:/redirects.json"
   ],
   "includes": [
     "/content/arb-blogs/"
