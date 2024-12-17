@@ -101,11 +101,29 @@
       {
         "component": "multiselect",
         "name": "style",
-        "label": "Style",
+        "label": "Section Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Content style",
+            "children":[
+              {
+                "name": "Text Color",
+                "value": "text-color"
+              }
+            ]
+          },
+          {
+            "name": "Background Color",
+            "children":[
+              {
+                "name": "Light Blue",
+                "value": "bg-light-blue"
+              },
+              {
+                "name": "Yellow",
+                "value": "bg-yellow"
+              }
+            ]
           }
         ]
       }
@@ -163,6 +181,23 @@
     "id": "hero",
     "fields": [
       {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Hero Style",
+        "options": [
+          {
+            "name": "Hero Bg Color",
+            "value": "hero-bg-color"
+          },
+          {
+            "name": "Hero text",
+            "value": "hero-text"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -182,6 +217,77 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "categories",
+    "fields": [
+      {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Categories Style",
+        "options": [
+          {
+            "name": "Categories Bg Color",
+            "value": "Categories-bg-color"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tags",
+    "fields": [
+      {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Tags Style",
+        "options": [
+          {
+            "name": "Tags Bg Color",
+            "value": "tags-bg-color"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "experience-fragment",
+    "fields": [
+      {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Experience Fragment Style",
+        "options": [
+          {
+            "name": "Color",
+            "value": "color"
+          }
+        ]
+      },
+      {
+        "component": "aem-experience-fragment",
+        "name": "picker",
+        "label": "Experience Fragment Picker",
+        "valueType": "string",
+        "variationName": "experienceFragmentVariation"
+      }
+    ]
+  },
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "boolean",
+        "name": "breadcrumb",
+        "label": "Breadcrumb"
       }
     ]
   }

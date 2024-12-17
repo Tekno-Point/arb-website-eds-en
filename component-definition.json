@@ -56,7 +56,7 @@
             }
           }
         }
-      ]
+      ] 
     },
     {
       "title": "Sections",
@@ -152,6 +152,51 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Categories",
+          "id": "categories",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Categories",
+                  "model": "categories"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tags",
+          "id": "tags",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tags",
+                  "model": "tags"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Experience Fragment",
+          "id": "experience-fragment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Experience Fragment",
+                  "model": "experience-fragment"
                 }
               }
             }
