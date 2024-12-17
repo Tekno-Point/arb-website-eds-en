@@ -286,7 +286,7 @@
     "fields": [
       {
         "component": "boolean",
-        "name": "breadcrumb",
+        "name": "breadcrumbs",
         "label": "Breadcrumb"
       }
     ]
