@@ -181,7 +181,7 @@
     "id": "hero",
     "fields": [
       {
-        "component":"select",
+        "component":"multiselect",
         "valueType":"string",
         "name":"classes",
         "value":"",
@@ -224,7 +224,7 @@
     "id": "categories",
     "fields": [
       {
-        "component":"select",
+        "component":"multiselect",
         "valueType":"string",
         "name":"classes",
         "value":"",
@@ -242,7 +242,7 @@
     "id": "tags",
     "fields": [
       {
-        "component":"select",
+        "component":"multiselect",
         "valueType":"string",
         "name":"classes",
         "value":"",
@@ -257,8 +257,21 @@
     ]
   },
   {
-    "id": "experiencefragment",
+    "id": "experience-fragment",
     "fields": [
+      {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Fragment Style",
+        "options": [
+          {
+            "name": "Color",
+            "value": "color"
+          }
+        ]
+      },
       {
         "component": "aem-experience-fragment",
         "name": "picker",
@@ -273,8 +286,8 @@
     "fields": [
       {
         "component": "boolean",
-        "name": "theme",
-        "label": "Theme"
+        "name": "breadcrumb",
+        "label": "Breadcrumb"
       }
     ]
   }
