@@ -104,6 +104,15 @@
         "label": "Section Style",
         "options": [
           {
+            "name": "Element style",
+            "children":[
+              {
+                "name": "Container",
+                "value": "container"
+              }
+            ]
+          },
+          {
             "name": "Content style",
             "children":[
               {
@@ -198,25 +207,25 @@
         ]
       },
       {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Image",
+        "label": "Profile Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt",
+        "label": "Profile Image Alt",
         "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -257,6 +266,70 @@
     ]
   },
   {
+    "id": "tag-list",
+    "fields": [
+      {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Tag-list Style",
+        "options": [
+          {
+            "name": "Tag-list Bg Color",
+            "value": "tag-list-bg-color"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reviews",
+    "fields": [
+      {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Reviews Style",
+        "options": [
+          {
+            "name": "Reviews Bg Color",
+            "value": "reviews-bg-color"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text1",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "experience-fragment",
     "fields": [
       {
@@ -278,6 +351,24 @@
         "label": "Experience Fragment Picker",
         "valueType": "string",
         "variationName": "experienceFragmentVariation"
+      }
+    ]
+  },
+  {
+    "id": "container",
+    "fields": [
+      {
+        "component":"multiselect",
+        "valueType":"string",
+        "name":"classes",
+        "value":"",
+        "label":"Container Style",
+        "options": [
+          {
+            "name": "Container Bg Color",
+            "value": "container-bg-color"
+          }
+        ]
       }
     ]
   },

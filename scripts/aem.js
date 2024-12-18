@@ -16,7 +16,7 @@ function sampleRUM(checkpoint, data) {
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
   try {
     window.hlx = window.hlx || {};
-    sampleRUM.enhance = () => {};
+    sampleRUM.enhance = () => { };
     if (!window.hlx.rum) {
       const param = new URLSearchParams(window.location.search).get('rum');
       const weight = (window.SAMPLE_PAGEVIEWS_AT_RATE === 'high' && 10)
@@ -466,6 +466,18 @@ function decorateIcons(element, prefix = '') {
 }
 
 /**
+ * Decorates a Container.
+ * @param {Element} block The Container element
+ */
+function decorateContainer(section) {
+  const sectionClassName = section.classList[0];
+  const container = document.createElement('div');
+  Array.from(section.children).forEach((child) => container.append(child));
+  container.classList.add((sectionClassName ? `${sectionClassName}-container` : 'default-container'));
+  section.append(container);
+}
+
+/**
  * Decorates all sections in a container element.
  * @param {Element} main The container element
  */
@@ -498,6 +510,8 @@ function decorateSections(main) {
             .filter((style) => style)
             .map((style) => toClassName(style.trim()));
           styles.forEach((style) => section.classList.add(style));
+          // debugger;
+          if (styles.includes('container')) decorateContainer(section);
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
@@ -727,6 +741,7 @@ export {
   decorateButtons,
   decorateIcons,
   decorateSections,
+  decorateContainer,
   decorateTemplateAndTheme,
   fetchPlaceholders,
   getMetadata,
