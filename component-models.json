@@ -266,18 +266,18 @@
     ]
   },
   {
-    "id": "taglist",
+    "id": "tag-list",
     "fields": [
       {
         "component":"multiselect",
         "valueType":"string",
         "name":"classes",
         "value":"",
-        "label":"Taglist Style",
+        "label":"Tag-list Style",
         "options": [
           {
-            "name": "Taglist Bg Color",
-            "value": "taglist-bg-color"
+            "name": "Tag-list Bg Color",
+            "value": "tag-list-bg-color"
           }
         ]
       }
@@ -298,6 +298,13 @@
             "value": "reviews-bg-color"
           }
         ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       },
       {
         "component": "reference",
