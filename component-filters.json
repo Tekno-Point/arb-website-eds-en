@@ -18,7 +18,10 @@
       "fragment",
       "categories",
       "tags",
-      "experience-fragment"
+      "taglist",
+      "reviews",
+      "experience-fragment",
+      "container"
     ]
   },
   {
@@ -41,5 +44,9 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "container",
+    "components": []
   }
 ]
