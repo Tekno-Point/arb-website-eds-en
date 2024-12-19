@@ -197,12 +197,8 @@
         "label":"Hero Style",
         "options": [
           {
-            "name": "Hero Bg Color",
-            "value": "hero-bg-color"
-          },
-          {
-            "name": "Hero text",
-            "value": "hero-text"
+            "name": "Hero Image",
+            "value": "hero_img"
           }
         ]
       },
@@ -240,8 +236,16 @@
         "label":"Categories Style",
         "options": [
           {
-            "name": "Categories Bg Color",
-            "value": "Categories-bg-color"
+            "name": "Categories Wrapper",
+            "value": "Categories_Wrapper"
+          },
+          {
+            "name": "Categories Title ",
+            "value": "Categories_title"
+          },
+          {
+            "name": "Categories Items ",
+            "value": "Categories_items"
           }
         ]
       }
@@ -276,8 +280,16 @@
         "label":"Tag-list Style",
         "options": [
           {
-            "name": "Tag-list Bg Color",
-            "value": "tag-list-bg-color"
+            "name": "Tag-list Wrapper",
+            "value": "taglist_wrapper"
+          },
+          {
+            "name": "Tag-list Title",
+            "value": "taglist_title"
+          },
+          {
+            "name": "Tag-list Items",
+            "value": "taglist_items"
           }
         ]
       }
@@ -294,8 +306,28 @@
         "label":"Blog Details Style",
         "options": [
           {
-            "name": "Blog Details Bg Color",
-            "value": "blog-details-bg-color"
+            "name": "Blog Title",
+            "value": "blog_title"
+          },
+          {
+            "name": "Blog Time",
+            "value": "blog_time"
+          },
+          {
+            "name": "Blog Heading Primary",
+            "value": "blog_heading-primary"
+          },
+          {
+            "name": "Blog Heading Secondary",
+            "value": "blog_heading-secondary"
+          },
+          {
+            "name": "Blog Description",
+            "value": "blog_description"
+          },
+          {
+            "name": "Blog Image",
+            "value": "blog_image"
           }
         ]
       },

@@ -1,3 +1,3 @@
 export default function decorate(block) {
-  block.innerHTML = '<h1>Tags</h1>';
+  block.innerHTML = '<h5>Tags</h5>';
 }
