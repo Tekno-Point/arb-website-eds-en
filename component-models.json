@@ -217,14 +217,14 @@
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Profile Image",
+        "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
-        "label": "Profile Image Alt",
+        "label": "Image Alt",
         "value": ""
       }
     ]
@@ -284,18 +284,18 @@
     ]
   },
   {
-    "id": "reviews",
+    "id": "blog-details",
     "fields": [
       {
         "component":"multiselect",
         "valueType":"string",
         "name":"classes",
         "value":"",
-        "label":"Reviews Style",
+        "label":"Blog Details Style",
         "options": [
           {
-            "name": "Reviews Bg Color",
-            "value": "reviews-bg-color"
+            "name": "Blog Details Bg Color",
+            "value": "blog-details-bg-color"
           }
         ]
       },
@@ -310,14 +310,14 @@
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Image",
+        "label": "Profile Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt",
+        "label": "Profile Image Alt",
         "value": ""
       },
       {
