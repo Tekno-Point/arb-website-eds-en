@@ -118,6 +118,14 @@
               {
                 "name": "Text Color",
                 "value": "text-color"
+              },
+              {
+                "name": "Flex Container",
+                "value": "flex-container"
+              },
+              {
+                "name": "Blog Wrapper",
+                "value": "blog_wrapper"
               }
             ]
           },
@@ -328,6 +336,18 @@
           {
             "name": "Blog Image",
             "value": "blog_image"
+          },
+          {
+            "name": "Blog Links",
+            "value": "blog_links"
+          },
+          {
+            "name": "Border Top",
+            "value": "border-top"
+          },
+          {
+            "name": "Border Bottom",
+            "value": "border-bottom"
           }
         ]
       },
@@ -399,6 +419,14 @@
           {
             "name": "Container Bg Color",
             "value": "container-bg-color"
+          },
+          {
+            "name": "Width-40",
+            "value": "width-40"
+          },
+          {
+            "name": "Width-60",
+            "value": "width-60"
           }
         ]
       }
