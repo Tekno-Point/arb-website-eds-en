@@ -42,7 +42,16 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "categories",
+      "tags",
+      "tag-list",
+      "blog-details",
+      "experience-fragment"
     ]
   },
   {
