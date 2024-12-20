@@ -1,3 +1,43 @@
-.top {
-    color: red;
+.blog-details.blog-title h1 {
+    font-size: var(--heading-font-size-xxl);
+    line-height: 72px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
 }
+
+.blog-details.blog-time p{
+    font-size: var(--body-font-size-xs);
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--light-grey);
+    padding-top: 12px;
+    margin: 0;
+    padding-bottom: 32px;
+}
+
+.blog-details.blog-heading-primary h3 {
+    font-size: var(--heading-font-size-xl);
+    line-height: 44px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+    padding-top: 32px;
+}
+
+.blog-details.blog-description p{
+    font-size: var(--body-font-size-s);
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--dark-grey);
+    margin: 0;
+    padding-top: 32px;
+}
+
+.blog-details.blog-heading-secondary h4 {
+    font-size: var(--heading-font-size-l);
+    line-height: 36px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+} 
