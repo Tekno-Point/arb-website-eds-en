@@ -105,7 +105,7 @@
         "options": [
           {
             "name": "Element style",
-            "children":[
+            "children": [
               {
                 "name": "Container",
                 "value": "container"
@@ -114,7 +114,7 @@
           },
           {
             "name": "Content style",
-            "children":[
+            "children": [
               {
                 "name": "Text Color",
                 "value": "text-color"
@@ -126,12 +126,20 @@
               {
                 "name": "Blog Wrapper",
                 "value": "blog_wrapper"
+              },
+              {
+                "name": "Width-40",
+                "value": "width-40"
+              },
+              {
+                "name": "Width-60",
+                "value": "width-60"
               }
             ]
           },
           {
             "name": "Background Color",
-            "children":[
+            "children": [
               {
                 "name": "Light Blue",
                 "value": "bg-light-blue"
@@ -139,6 +147,51 @@
               {
                 "name": "Yellow",
                 "value": "bg-yellow"
+              }
+            ]
+          },
+          {
+            "name": "Background Color",
+            "children": [
+              {
+                "name": "mt-10",
+                "value": "mt-10"
+              },
+              {
+                "name": "mt-20",
+                "value": "mt-20"
+              },
+              {
+                "name": "mt-30",
+                "value": "mt-30"
+              },
+              {
+                "name": "mt-40",
+                "value": "mt-40"
+              },
+              {
+                "name": "mt-50",
+                "value": "mt-50"
+              },
+              {
+                "name": "mb-10",
+                "value": "mb-10"
+              },
+              {
+                "name": "mb-20",
+                "value": "mb-20"
+              },
+              {
+                "name": "mb-30",
+                "value": "mb-30"
+              },
+              {
+                "name": "mb-40",
+                "value": "mb-40"
+              },
+              {
+                "name": "mb-50",
+                "value": "mb-50"
               }
             ]
           }
@@ -198,11 +251,11 @@
     "id": "hero",
     "fields": [
       {
-        "component":"multiselect",
-        "valueType":"string",
-        "name":"classes",
-        "value":"",
-        "label":"Hero Style",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Hero Style",
         "options": [
           {
             "name": "Hero Image",
@@ -237,11 +290,11 @@
     "id": "categories",
     "fields": [
       {
-        "component":"multiselect",
-        "valueType":"string",
-        "name":"classes",
-        "value":"",
-        "label":"Categories Style",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Categories Style",
         "options": [
           {
             "name": "Categories Wrapper",
@@ -263,11 +316,11 @@
     "id": "tags",
     "fields": [
       {
-        "component":"multiselect",
-        "valueType":"string",
-        "name":"classes",
-        "value":"",
-        "label":"Tags Style",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Tags Style",
         "options": [
           {
             "name": "Tags Bg Color",
@@ -281,11 +334,11 @@
     "id": "tag-list",
     "fields": [
       {
-        "component":"multiselect",
-        "valueType":"string",
-        "name":"classes",
-        "value":"",
-        "label":"Tag-list Style",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Tag-list Style",
         "options": [
           {
             "name": "Tag-list Wrapper",
@@ -307,11 +360,11 @@
     "id": "blog-details",
     "fields": [
       {
-        "component":"multiselect",
-        "valueType":"string",
-        "name":"classes",
-        "value":"",
-        "label":"Blog Details Style",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Blog Details Style",
         "options": [
           {
             "name": "Blog Title",
@@ -385,11 +438,11 @@
     "id": "experience-fragment",
     "fields": [
       {
-        "component":"multiselect",
-        "valueType":"string",
-        "name":"classes",
-        "value":"",
-        "label":"Experience Fragment Style",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Experience Fragment Style",
         "options": [
           {
             "name": "Color",
@@ -410,23 +463,15 @@
     "id": "container",
     "fields": [
       {
-        "component":"multiselect",
-        "valueType":"string",
-        "name":"classes",
-        "value":"",
-        "label":"Container Style",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Container Style",
         "options": [
           {
             "name": "Container Bg Color",
             "value": "container-bg-color"
-          },
-          {
-            "name": "Width-40",
-            "value": "width-40"
-          },
-          {
-            "name": "Width-60",
-            "value": "width-60"
           }
         ]
       }
