@@ -381,13 +381,14 @@ main > .section:first-of-type {
 }
 
 /* width classes */
-.width-40 {
+
+/* .width-40 {
   width: 40%;
 }
 
 .width-60 {
   width: 60%;
-}
+} */
 
 
 /* section metadata */
