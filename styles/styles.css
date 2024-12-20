@@ -355,11 +355,11 @@ main > .section:first-of-type {
 }
 
 .border-top {
-  border: 1px solid #304F6C1A;
+  border-top: 1px solid #304F6C1A;
 }
 
 .border-bottom {
-  border: 1px solid #304F6C1A;
+  border-bottom: 1px solid #304F6C1A;
 }
 
 /* flex classes */

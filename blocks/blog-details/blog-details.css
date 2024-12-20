@@ -1,3 +1,15 @@
+.section.flex-container.blog-wrapper {
+    gap: 70px;
+}
+
+.section.width-60:first-child {
+    width: 60%;
+}
+
+.section.width-40:nth-child(2) {
+    width: 40%;
+}
+
 .blog-details.blog-title h1 {
     font-size: var(--heading-font-size-xxl);
     line-height: 72px;
@@ -40,4 +52,6 @@
     font-weight: 700;
     color: var(--black);
     margin: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
 } 
