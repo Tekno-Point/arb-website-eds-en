@@ -1,5 +1,39 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "boolean",
+        "name": "breadcrumbs",
+        "label": "Breadcrumb"
+      },
+      {
+        "component": "multiselect",
+        "name": "robots",
+        "value": "",
+        "label": "Robots Tags",
+        "options": [
+          {
+            "name": "index",
+            "value": "index"
+          },
+          {
+            "name": "noindex",
+            "value": "noindex"
+          },
+          {
+            "name": "follow",
+            "value": "follow"
+          },
+          {
+            "name": "nofollow",
+            "value": "nofollow"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
@@ -474,16 +508,6 @@
             "value": "container-bg-color"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "page-metadata",
-    "fields": [
-      {
-        "component": "boolean",
-        "name": "breadcrumbs",
-        "label": "Breadcrumb"
       }
     ]
   }
