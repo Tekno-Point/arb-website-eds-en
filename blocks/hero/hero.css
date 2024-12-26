@@ -42,7 +42,7 @@
 } 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .hero.hero-img {
     padding-top: 64px;
   }
