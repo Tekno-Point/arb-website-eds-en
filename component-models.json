@@ -151,7 +151,7 @@
             ]
           },
           {
-            "name": "Background Color",
+            "name": "Margin",
             "children": [
               {
                 "name": "mt-10",
@@ -182,6 +182,10 @@
                 "value": "mb-20"
               },
               {
+                "name": "mb-25",
+                "value": "mb-25"
+              },
+              {
                 "name": "mb-30",
                 "value": "mb-30"
               },
@@ -192,6 +196,18 @@
               {
                 "name": "mb-50",
                 "value": "mb-50"
+              },
+              {
+                "name": "mb-60",
+                "value": "mb-60"
+              },
+              {
+                "name": "mb-70",
+                "value": "mb-70"
+              },
+              {
+                "name": "mb-80",
+                "value": "mb-80"
               }
             ]
           }
@@ -309,6 +325,11 @@
             "value": "Categories_items"
           }
         ]
+      },
+      {
+        "component" : "richtext",
+        "name" : "content",
+        "label" : "Heading"
       }
     ]
   },
@@ -353,6 +374,11 @@
             "value": "taglist_items"
           }
         ]
+      },
+      {
+        "component" : "richtext",
+        "name" : "content",
+        "label" : "Heading"
       }
     ]
   },
