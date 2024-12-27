@@ -3,16 +3,6 @@
     "id": "page-metadata",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "label": "Page Title"
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Page Description"
-      },
-      {
         "component": "reference",
         "name": "page-img",
         "label": "Page Image"
