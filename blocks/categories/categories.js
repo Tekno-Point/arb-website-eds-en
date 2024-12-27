@@ -4,13 +4,18 @@ import {
 import { getList } from '../taglist/taglist.js';
 import decorateAccordion from '../accordion/accordion.js';
 
+export function capitalizeEveryWord(str) {
+  if (str.length === 0) return str;
+  return str.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 export default async function decorate(block) {
   const list = await getList();
 
   block.firstElementChild.append(
     div(
       ul(
-        ...list.map((eachData) => li(a({ href: eachData.path }, (`${eachData.category}`)), span(`${eachData.count}`))),
+        ...list.map((eachData) => li(a({ href: eachData.path }, capitalizeEveryWord((`${eachData.category}`))), span(`${eachData.count}`))),
       ),
     ),
   );
