@@ -1,6 +1,7 @@
-import { li, ul } from '../../scripts/dom-helpers.js';
+import { div, li, ul } from '../../scripts/dom-helpers.js';
 import Category from './category.js';
 import Tag from './tag.js';
+import decorateAccordion from '../accordion/accordion.js';
 
 export async function getList() {
   const resp = await fetch('/query-index.json');
@@ -36,9 +37,15 @@ export async function getList() {
 
 export default async function decorate(block) {
   const list = await getList();
-  block.append(
-    ul(
-      ...list[0].tags.map((eachData) => li(eachData.tag)),
+  block.firstElementChild.append(
+    div(
+      ul(
+        ...list[0].tags.map((eachData) => li(eachData.tag)),
+      ),
     ),
   );
+
+  if (window.innerWidth < 769) {
+    decorateAccordion(block);
+  }
 }
