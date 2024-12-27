@@ -3,6 +3,11 @@
     "id": "page-metadata",
     "fields": [
       {
+        "component": "reference",
+        "name": "page-img",
+        "label": "Page Image"
+      },
+      {
         "component": "boolean",
         "name": "breadcrumbs",
         "label": "Breadcrumb"
