@@ -422,6 +422,31 @@
     ]
   },
   {
+    "id": "blog-list",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Blog Details Style",
+        "options": [
+          {
+            "name": "Blog LIst Wrapper",
+            "value": "blog-list-wrapper"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "blog-details",
     "fields": [
       {
