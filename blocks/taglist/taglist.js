@@ -3,6 +3,11 @@ import Category from './category.js';
 import Tag from './tag.js';
 import decorateAccordion from '../accordion/accordion.js';
 
+export function capitalizeFirstLet(str) {
+  if (str.length === 0) return str;
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export async function getList() {
   const resp = await fetch('/query-index.json');
   const jsonData = await resp.json();
@@ -40,7 +45,7 @@ export default async function decorate(block) {
   block.firstElementChild.append(
     div(
       ul(
-        ...list[0].tags.map((eachData) => li(eachData.tag)),
+        ...list[0].tags.map((eachData) => li(capitalizeFirstLet(eachData.tag))),
       ),
     ),
   );

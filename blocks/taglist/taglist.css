@@ -41,12 +41,32 @@
 }
 
 
-@media screen and (width <= 768px) {
-  .taglist.taglist-title h5{
-      font-size: var(--heading-font-size-xs);
-      line-height: 20px;
-      padding-bottom: 0;
+@media screen and (width <=768px) {
+  .taglist.taglist-title h5 {
+    font-size: var(--heading-font-size-xs);
+    line-height: 20px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
   }
+
+  .taglist.taglist-title h5::after {
+    content: url('/icons/expand_more.svg');
+    display: inline-block;
+    height: 10px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .taglist.taglist-title .accordion-item[open] h5::after{
+    /* content: url('/icons/expand_less.svg'); */
+    transform: rotate(180deg);
+    top: 10px;
+    right: -5px;
+}
 
   .taglist.taglist-title ul {
     border-top: none;
