@@ -15,7 +15,14 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "categories",
+      "tags",
+      "tag-list",
+      "blog-list",
+      "blog-details",
+      "experience-fragment",
+      "container"
     ]
   },
   {
@@ -36,7 +43,20 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "categories",
+      "tags",
+      "tag-list",
+      "blog-details",
+      "experience-fragment"
     ]
+  },
+  {
+    "id": "container",
+    "components": []
   }
 ]
