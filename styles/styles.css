@@ -403,6 +403,14 @@ main > .section:first-of-type {
   width: 60%;
 } */
 
+.section.width-60 > div:first-child {
+  width: 60%;
+}
+
+.section.width-40 > div:nth-child(2) {
+  width: 40%;
+}
+
 
 /* section metadata */
 main .section.light,
