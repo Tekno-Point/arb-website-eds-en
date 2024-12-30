@@ -1,7 +1,7 @@
+import { getQueryList } from '../../scripts/common.js';
 import {
   a, div, li, ul, img, h5, p,
 } from '../../scripts/dom-helpers.js';
-import { getList } from '../taglist/taglist.js';
 
 // async function getBlogList() {
 //   const resp = await fetch('/query-index.json');
@@ -16,31 +16,21 @@ import { getList } from '../taglist/taglist.js';
 // }
 
 export default async function decorate(block) {
-  const list = await getList();
+  const list = await getQueryList();
   console.log(list);
-
+  const path = new URL(window.location.href).pathname.replace('/', '');
   block.firstElementChild.append(
-    ...[1,2,3,4,5,6,7,8,9].map((eachData) => div(
+    ...list.filter((eachList) => eachList.tag.includes(path)).map((eachData) => div(
       { class: 'blog-card' },
-      div({ class: 'blog-card_img' }, img({ src: '/images/king-of-hammer.png' })),
+      div({ class: 'blog-card-img' }, img({ src: '/images/king-of-hammer.png' })),
       div(
-        { class: 'blog-card_content' },
+        { class: 'blog-card-content' },
         div(
-          { class: 'blog-card_tags' },
-          ul(...[
-            {
-                "tag": "act"
-            },
-            {
-                "tag": "campaign"
-            },
-            {
-                "tag": "fishing"
-            }
-        ].map((eachTag) => (li(eachTag.tag)))),
+          { class: 'blog-card-tags' },
+          ul(...eachData.tag.split(',').map((eachTag) => (li(eachTag)))),
         ),
-        div({ class: 'blog-card_description' }, h5('King of the Hammers'), p('Read more about ARB’s dominant performance at the famous desert racing and rock crawling event.')),
-        div({ class: 'blog-card_btn' }, a({ src: '/' }, 'Read More')),
+        div({ class: 'blog-card-description' }, h5(eachData.title), p(eachData.description)),
+        div({ class: 'blog-card-btn' }, a({ href: eachData.path }, 'Read More')),
       ),
     )),
   );

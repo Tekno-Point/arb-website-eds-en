@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.blog-list.blog-list-wrapper .blog-card_tags ul {
+.blog-list.blog-list-wrapper .blog-card-tags ul {
     list-style: none;
     display: flex;
     gap: 8px;
@@ -10,7 +10,7 @@
     padding: 0;
 }
 
-.blog-list.blog-list-wrapper .blog-card_tags ul li {
+.blog-list.blog-list-wrapper .blog-card-tags ul li {
     background-color: var(--grey);
     color: var(--black);
     font-size: 14px;
@@ -20,7 +20,7 @@
     padding: 4px 16px;
 }
 
-.blog-list.blog-list-wrapper .blog-card_description h5 {
+.blog-list.blog-list-wrapper .blog-card-description h5 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 600;
@@ -29,7 +29,7 @@
     padding-top: 16px;
 }
 
-.blog-list.blog-list-wrapper .blog-card_description p {
+.blog-list.blog-list-wrapper .blog-card-description p {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -38,7 +38,7 @@
     padding-top: 16px;
 }
 
-.blog-list.blog-list-wrapper .blog-card_btn a {
+.blog-list.blog-list-wrapper .blog-card-btn a {
     font-size: 14px;
     line-height: 24px;
     font-weight: 500;
