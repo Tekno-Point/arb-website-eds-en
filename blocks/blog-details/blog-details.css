@@ -1,5 +1,5 @@
 .section.flex-container.blog-wrapper {
-    gap: 70px;
+    gap: 64px;
 }
 
 .section.width-60 > div:first-child {
@@ -88,7 +88,7 @@
     padding-top: 32px;
 }
 
-@media screen and (width <= 767px) {
+@media screen and (width <= 768px) {
     .section.flex-container.blog-wrapper {
         gap: 70px;
         flex-direction: column;

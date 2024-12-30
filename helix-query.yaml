@@ -8,6 +8,15 @@ indices:
       - '/**.json'
     target: /query-index.json
     properties:
+      title:
+        select: head > meta[name="title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      image:
+        select: head > meta[name="page-img"]
+        value: attribute(el, "content")
       tag:
         select: head > meta[name="cq-tags"]
         value: attribute(el, "content")

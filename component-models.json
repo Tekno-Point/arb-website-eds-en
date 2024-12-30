@@ -3,6 +3,11 @@
     "id": "page-metadata",
     "fields": [
       {
+        "component": "reference",
+        "name": "page-img",
+        "label": "Page Image"
+      },
+      {
         "component": "boolean",
         "name": "breadcrumbs",
         "label": "Breadcrumb"
@@ -413,6 +418,31 @@
         "component" : "richtext",
         "name" : "content",
         "label" : "Heading"
+      }
+    ]
+  },
+  {
+    "id": "blog-list",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Blog Details Style",
+        "options": [
+          {
+            "name": "Blog LIst Wrapper",
+            "value": "blog-list-wrapper"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
