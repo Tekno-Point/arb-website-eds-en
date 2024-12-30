@@ -411,6 +411,9 @@ main > .section:first-of-type {
   width: 40%;
 }
 
+.section.flex-container.blog-wrapper {
+  gap: 64px;
+}
 
 /* section metadata */
 main .section.light,
@@ -418,4 +421,31 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+@media screen and (width <= 768px) {
+  .blog-list.blog-list-wrapper .blog-card {
+    flex-direction: column;
+    gap: 70px;
+  }
+}
+
+
+/* breadcrumbs css */
+.header-wrapper .nav-wrapper .breadcrumbs {
+  padding: 0 14px;
+}
+
+header .breadcrumbs ol li:not(:last-child) a {
+  color: #000;
+}
+
+.header-wrapper .nav-wrapper .breadcrumbs ol li a {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.header-wrapper .nav-wrapper .breadcrumbs ol li:empty::after a{
+  color: #454B58;
 }

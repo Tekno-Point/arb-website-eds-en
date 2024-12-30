@@ -1,7 +1,3 @@
-.section.flex-container.blog-wrapper {
-    gap: 64px;
-}
-
 .blog-details.blog-title h1 {
     font-size: var(--heading-font-size-xxl);
     line-height: 72px;
@@ -81,11 +77,6 @@
 }
 
 @media screen and (width <= 768px) {
-    .section.flex-container.blog-wrapper {
-        gap: 70px;
-        flex-direction: column;
-    }
-
     .section.width-60 > div:first-child {
         width: 100%;
     }
