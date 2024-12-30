@@ -178,8 +178,12 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
-  // decorate nav DOM
   block.textContent = '';
+  if (navPath === '/nav') {
+    block.append(fragment.firstElementChild);
+    return block;
+  }
+  // decorate nav DOM
   const nav = document.createElement('nav');
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
@@ -192,7 +196,7 @@ export default async function decorate(block) {
 
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
+  if (brandLink && brandLink.closest('.button-container')) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
   }
@@ -240,4 +244,5 @@ export default async function decorate(block) {
   if (getMetadata('breadcrumbs').toLowerCase() === '12') {
     navWrapper.append(await buildBreadcrumbs());
   }
+  return block;
 }
