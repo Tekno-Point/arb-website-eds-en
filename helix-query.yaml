@@ -17,6 +17,9 @@ indices:
       image:
         select: head > meta[name="page-img"]
         value: attribute(el, "content")
+      breadcrumbstitle:
+        select: head > meta[name="breadcrumbs_title"]
+        value: attribute(el, "content")
       tag:
         select: head > meta[name="cq-tags"]
         value: attribute(el, "content")

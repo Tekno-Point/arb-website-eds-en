@@ -13,6 +13,11 @@
         "label": "Breadcrumb"
       },
       {
+        "component": "text",
+        "name": "breadcrumbs_title",
+        "label": "Breadcrumb Title"
+      },
+      {
         "component": "multiselect",
         "name": "robots",
         "value": "",
