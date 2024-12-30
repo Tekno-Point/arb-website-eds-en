@@ -1,4 +1,5 @@
 import { fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
+import { getQueryList } from '../../scripts/common.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
@@ -103,7 +104,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-function getDirectTextContent(menuItem) {
+/* function getDirectTextContent(menuItem) {
   const menuLink = menuItem.querySelector(':scope > a');
   if (menuLink) {
     return menuLink.textContent.trim();
@@ -112,34 +113,26 @@ function getDirectTextContent(menuItem) {
     .filter((n) => n.nodeType === Node.TEXT_NODE)
     .map((n) => n.textContent)
     .join(' ');
-}
+} */
 
-async function buildBreadcrumbsFromNavTree(nav, currentUrl) {
+async function buildBreadcrumbsFromNavTree() {
   const crumbs = [];
 
-  const homeUrl = document.querySelector('.nav-brand a[href]').href;
-
-  let menuItem = Array.from(nav.querySelectorAll('a')).find((a) => a.href === currentUrl);
-  if (menuItem) {
-    do {
-      const link = menuItem.querySelector(':scope > a');
-      crumbs.unshift({ title: getDirectTextContent(menuItem), url: link ? link.href : null });
-      menuItem = menuItem.closest('ul')?.closest('li');
-    } while (menuItem);
-  } else if (currentUrl !== homeUrl) {
-    crumbs.unshift({ title: getMetadata('og:title'), url: currentUrl });
-  }
-
+  // const homeUrl = document.querySelector('.nav-brand a[href]').href;
+  const currentUrl = new URL(window.location.href);
+  const currentPath = currentUrl.pathname;
+  const queryList = await getQueryList();
+  const breadcrumbsList = queryList.filter((eachlist) => currentPath.includes(eachlist.path));
   const placeholders = await fetchPlaceholders();
   const homePlaceholder = placeholders.breadcrumbsHomeLabel || 'Home';
+  breadcrumbsList.sort((a, b) => a.path.split('/').length - b.path.split('/').length).forEach((link) => {
+    if (link.path === '/') {
+      crumbs.push({ title: homePlaceholder, url: link.path });
+    } else {
+      crumbs.push({ title: link.breadcrumbstitle, url: link.path });
+    }
+  });
 
-  crumbs.unshift({ title: homePlaceholder, url: homeUrl });
-
-  // last link is current page and should not be linked
-  if (crumbs.length > 1) {
-    crumbs[crumbs.length - 1].url = null;
-  }
-  crumbs[crumbs.length - 1]['aria-current'] = 'page';
   return crumbs;
 }
 
@@ -237,7 +230,7 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
-  if (getMetadata('breadcrumbs').toLowerCase() === '12') {
+  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     navWrapper.append(await buildBreadcrumbs());
   }
 }
