@@ -1,7 +1,7 @@
 import {
   a, div, li, ul, span,
 } from '../../scripts/dom-helpers.js';
-import { getList } from '../taglist/taglist.js';
+import { getList } from '../../scripts/common.js';
 import decorateAccordion from '../accordion/accordion.js';
 
 export function capitalizeEveryWord(str) {
