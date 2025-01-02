@@ -2,7 +2,9 @@ import { getQueryList } from '../../scripts/common.js';
 import {
   a, div, li, ul, img, h5, p,
 } from '../../scripts/dom-helpers.js';
+import { capitalizeEveryWord } from '../categories/categories.js';
 
+// const domain = ['localhost', 'main--'];
 // async function getBlogList() {
 //   const resp = await fetch('/query-index.json');
 //   const jsonData = await resp.json();
@@ -17,21 +19,28 @@ import {
 
 export default async function decorate(block) {
   const list = await getQueryList();
-  console.log(list);
-  const path = new URL(window.location.href).pathname.replace('/', '');
+  //   console.log(list);
+  const url = new URL(window.location.href);
+  const path = url.pathname.replace('/', '');
   block.firstElementChild.append(
-    ...list.filter((eachList) => eachList.tag.includes(path)).map((eachData) => div(
-      { class: 'blog-card' },
-      div({ class: 'blog-card-img' }, img({ src: '/images/king-of-hammer.png' })),
-      div(
-        { class: 'blog-card-content' },
-        div(
-          { class: 'blog-card-tags' },
-          ul(...eachData.tag.split(',').map((eachTag) => (li(eachTag)))),
-        ),
-        div({ class: 'blog-card-description' }, h5(eachData.title), p(eachData.description)),
-        div({ class: 'blog-card-btn' }, a({ href: eachData.path }, 'Read More')),
-      ),
-    )),
+    ...list.filter((eachList) => (!eachList.path.endsWith(path) && eachList.tag.includes(path)))
+      .map((eachData) => {
+        const imgSrc = window.location.href.includes(url.origin) ? eachData.image.replace('/content/dam/arb-blogs/', '/images/') : eachData.image;
+        return div(
+          { class: 'blog-card' },
+          div({ class: 'blog-card-img' }, img({ src: imgSrc })),
+          div(
+            { class: 'blog-card-content' },
+            div(
+              div(
+                { class: 'blog-card-tags' },
+                ul(...eachData.tag.split(',').map((eachTag) => (li(capitalizeEveryWord(eachTag.split('/')[1]))))),
+              ),
+              div({ class: 'blog-card-description' }, h5(eachData.title || 'My Title'), p(eachData.description)),
+            ),
+            div({ class: 'blog-card-btn' }, a({ href: eachData.path }, 'Read More')),
+          ),
+        );
+      }),
   );
 }

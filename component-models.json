@@ -571,5 +571,23 @@
         ]
       }
     ]
+  },
+  {
+    "id": "pagination",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Pagination Style",
+        "options": [
+          {
+            "name": "Pagination Container",
+            "value": "pagination-container"
+          }
+        ]
+      }
+    ]
   }
 ]
