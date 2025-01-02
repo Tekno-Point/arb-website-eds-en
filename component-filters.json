@@ -22,7 +22,8 @@
       "blog-list",
       "blog-details",
       "experience-fragment",
-      "container"
+      "container",
+      "pagination"
     ]
   },
   {
