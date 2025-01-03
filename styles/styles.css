@@ -403,6 +403,17 @@ main > .section:first-of-type {
   width: 60%;
 } */
 
+.section.width-60 > div:first-child {
+  width: 60%;
+}
+
+.section.width-40 > div:nth-child(2) {
+  width: 40%;
+}
+
+.section.flex-container.blog-wrapper {
+  gap: 64px;
+}
 
 /* section metadata */
 main .section.light,
@@ -410,4 +421,11 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+@media screen and (width <= 768px) {
+  .blog-list.blog-list-wrapper .blog-card {
+    flex-direction: column;
+    gap: 70px;
+  }
 }

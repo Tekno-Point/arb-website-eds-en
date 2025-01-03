@@ -320,3 +320,22 @@ header .breadcrumbs ol li[aria-current] {
     padding: 0 32px;
   }
 }
+
+/* breadcrumbs css */
+.header-wrapper .nav-wrapper .breadcrumbs {
+  padding: 0 14px;
+}
+
+header .breadcrumbs ol li:not(:last-child) a {
+  color: #000;
+}
+
+.header-wrapper .nav-wrapper .breadcrumbs ol li a {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.header-wrapper .nav-wrapper .breadcrumbs ol li:empty::after a{
+  color: #454B58;
+}

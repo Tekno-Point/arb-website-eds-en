@@ -13,6 +13,11 @@
         "label": "Breadcrumb"
       },
       {
+        "component": "text",
+        "name": "breadcrumbs_title",
+        "label": "Breadcrumb Title"
+      },
+      {
         "component": "multiselect",
         "name": "robots",
         "value": "",
@@ -562,6 +567,24 @@
           {
             "name": "Container Bg Color",
             "value": "container-bg-color"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pagination",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Pagination Style",
+        "options": [
+          {
+            "name": "Pagination Container",
+            "value": "pagination-container"
           }
         ]
       }
