@@ -18,17 +18,24 @@ export default async function decorate(block) {
     const div = document.createElement('div');
     div.innerHTML = str;
     div.querySelectorAll('link').forEach((link) => {
-      const newLink = document.createElement('link');
-      newLink.href = link.href;
-      newLink.rel = 'stylesheet';
-      document.head.append(newLink);
+      try {
+        const newLink = document.createElement('link');
+        newLink.href = link.href;
+        newLink.rel = 'stylesheet';
+        document.head.append(newLink);
+      } catch (error) {
+        console.error(error); // eslint-disable-line
+      }
     });
     block.append(div.querySelector('.root'));
-    div.querySelectorAll('script').forEach((link, index) => {
-      const exculdeLink = ['/clientlibs/granite/', '/foundation/clientlibs'];
+    div.querySelectorAll('script').forEach((link) => {
+      const exculdeLink = [
+        '/clientlibs/granite/',
+        '/foundation/clientlibs',
+      ];
       // debugger;
       if (!exculdeLink.filter((clientLib) => link.src.includes(clientLib)).length) {
-        setTimeout(() => {
+        try {
           const newScript = document.createElement('script');
           newScript.src = link.src.replace('http://localhost:3000', 'https://publish-p144166-e1488019.adobeaemcloud.com');
           newScript.type = 'text/javascript';
@@ -36,9 +43,12 @@ export default async function decorate(block) {
           //   console.log('link.src :: ', newScript.src);
           // }
           document.body.append(newScript);
-        }, index);
+        } catch (error) {
+          console.error(error); // eslint-disable-line
+        }
       }
     });
+    // Create the event
     // block.innerHTML = str;
   }
   return block;
