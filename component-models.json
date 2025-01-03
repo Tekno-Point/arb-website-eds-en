@@ -540,8 +540,12 @@
         "label": "Experience Fragment Style",
         "options": [
           {
-            "name": "Color",
-            "value": "color"
+            "name": "Header Container",
+            "value": "header-container"
+          },
+          {
+            "name": "Footer Container",
+            "value": "footer-container"
           }
         ]
       },

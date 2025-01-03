@@ -7,15 +7,19 @@ function initPagination(element) {
   function renderItems() {
     const carousel = document.querySelectorAll('.blog-card');
     const startIndex = (currentPage - 1) * itemsPerPage;
-    debugger;
+    // debugger;
     const endIndex = Math.min(startIndex + itemsPerPage, items.length);
 
     const itemsToShow = items.slice(startIndex, endIndex); // Get items for the current page
     carousel.forEach(function (el,index) {
-      el.style.display = 'none';
+      // el.style.display = 'none';
+      el.classList.add('blog-display-none');
+      el.classList.remove('blog-display-flex');
     })
     itemsToShow.forEach(function (el,index) {
-      el.style.display = 'block';
+      // el.style.display = 'flex';
+      el.classList.add('blog-display-flex');
+      el.classList.remove('blog-display-none');
     })
     // carousel.innerHTML = itemsToShow
     //   .map((item) => `<div class="carousel-item">${item}</div>`)
@@ -95,9 +99,9 @@ export default function decorate(block) {
   //   </div>
   block.innerHTML = `
     <div class="pagination">
-        <button class="page-btn prev-btn" id="prevBtn">&laquo;</button>
+        <button class="page-btn prev-btn" id="prevBtn"><img src="../../icons/pagi-next-arrow.svg"/></button>
         <div id="pageNumbers"></div>
-        <button class="page-btn next-btn" id="nextBtn">&raquo;</button>
+        <button class="page-btn next-btn" id="nextBtn"><img src="../../icons/pagi-next-arrow.svg"/></button>
     </div>
   `;
 
