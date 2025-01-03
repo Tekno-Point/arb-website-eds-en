@@ -8,8 +8,15 @@
     border-bottom: 1px solid #304F6C1A;
 }
 
-.blog-list.blog-list-wrapper .blog-card {
+.blog-list.blog-list-wrapper .blog-card.blog-display-none {
+    display: none;
+}
+
+.blog-list.blog-list-wrapper .blog-card.blog-display-flex {
     display: flex;
+}
+
+.blog-list.blog-list-wrapper .blog-card {
     gap: 32px;
     margin-bottom: 24px;
     padding-top: 24px;
