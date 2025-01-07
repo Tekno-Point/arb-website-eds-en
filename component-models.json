@@ -602,5 +602,17 @@
         ]
       }
     ]
+  },
+  {
+    "id": "klaviyo-script",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Klaviyo Style"
+      }
+    ]
   }
 ]
