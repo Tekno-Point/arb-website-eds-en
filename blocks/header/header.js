@@ -172,6 +172,10 @@ export default async function decorate(block) {
   const fragment = await loadFragment(navPath);
 
   block.textContent = '';
+  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
+    const section = document.querySelector('.section');
+    section.prepend(await buildBreadcrumbs());
+  }
   if (navPath === '/nav') {
     block.append(fragment.firstElementChild);
     return block;
@@ -236,8 +240,5 @@ export default async function decorate(block) {
 
   // const heroWrapper = document.querySelector('.hero-wrapper');
 
-  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
-    navWrapper.append(await buildBreadcrumbs());
-  }
   return block;
 }

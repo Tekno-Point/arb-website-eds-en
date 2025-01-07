@@ -48,6 +48,15 @@ export default async function decorate(block) {
         }
       }
     });
+
+    if (window.isLast) {
+      setTimeout(() => {
+        const event = new Event('DOMContentLoaded');
+        // Dispatch the event
+        document.dispatchEvent(event);
+      }, 1000);
+    }
+    window.isLast = true;
     // Create the event
     // block.innerHTML = str;
   }

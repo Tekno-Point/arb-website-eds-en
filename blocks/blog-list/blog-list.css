@@ -80,12 +80,16 @@
     width: 296px;
 }
 
+.blog-list.blog-list-wrapper .blog-card-img img {
+    max-width: unset;
+}
+
 @media screen and (width <= 768px) {
     .blog-list.blog-list-wrapper .blog-card {
         gap: 16px;
     }
 
-    .section.flex-container.blog-wrapper {
+    .blog-list.blog-list-wrapper .blog-card.blog-display-flex {
         flex-direction: column;
     }
 

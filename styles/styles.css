@@ -62,7 +62,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* heading sizes */
     --heading-font-size-xxl: 64px;
@@ -116,12 +116,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -146,7 +163,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -196,7 +213,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  /* background-color: var(--link-hover-color); */
   cursor: pointer;
 }
 
@@ -230,14 +247,14 @@ main img {
 }
 
 /* sections */
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   .section {
     max-width: 1240px;
-    margin:0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -379,6 +396,10 @@ main > .section:first-of-type {
   display: flex;
 }
 
+.flex-direction-col {
+  flex-direction: column;
+}
+
 /* text classes */
 .text-center {
   text-align: center;
@@ -402,11 +423,11 @@ main > .section:first-of-type {
   width: 60%;
 } */
 
-.section.width-60 > div:first-child {
+.section.width-60>div:first-child {
   width: 60%;
 }
 
-.section.width-40 > div:nth-child(2) {
+.section.width-40>div:nth-child(2) {
   width: 40%;
 }
 
@@ -422,9 +443,12 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-@media screen and (width <= 768px) {
-  .blog-list.blog-list-wrapper .blog-card {
+@media screen and (width <=768px) {
+  .section.flex-container.blog-wrapper {
     flex-direction: column;
-    gap: 70px;
   }
+
+  /* .blog-list.blog-list-wrapper .blog-card {
+    gap: 70px;
+  }  */
 }

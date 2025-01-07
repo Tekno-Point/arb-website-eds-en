@@ -38,16 +38,12 @@
 
 
 .hero.hero-img {
-  padding-top: 100px;
+  padding-top: 16px;
 }
 
 @media screen and (width <=768px) {
   .section.hero-container:has(.hero.hero-img) {
     margin: 0;
-  }
-
-  .hero.hero-img {
-    padding-top: 64px;
   }
 
   .hero.hero-img img {
