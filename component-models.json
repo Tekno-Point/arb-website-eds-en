@@ -8,6 +8,11 @@
         "label": "Page Image"
       },
       {
+        "component": "text",
+        "name": "description",
+        "label": "Page Description"
+      },
+      {
         "component": "boolean",
         "name": "breadcrumbs",
         "label": "Breadcrumb"
