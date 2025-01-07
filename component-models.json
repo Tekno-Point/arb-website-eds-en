@@ -362,16 +362,16 @@
         "label": "Categories Style",
         "options": [
           {
-            "name": "Categories Wrapper",
-            "value": "Categories_Wrapper"
+            "name": "Categories Container",
+            "value": "categories__container"
           },
           {
-            "name": "Categories Title ",
-            "value": "Categories_title"
+            "name": "Categories Title",
+            "value": "categories__title"
           },
           {
-            "name": "Categories Items ",
-            "value": "Categories_items"
+            "name": "Categories List",
+            "value": "categories__list"
           }
         ]
       },
@@ -395,6 +395,10 @@
           {
             "name": "Tags Bg Color",
             "value": "tags-bg-color"
+          },
+          {
+            "name": "Tags Container",
+            "value": "tags__container"
           }
         ]
       }
@@ -411,16 +415,16 @@
         "label": "Tag-list Style",
         "options": [
           {
-            "name": "Tag-list Wrapper",
-            "value": "taglist_wrapper"
+            "name": "Tag-list Container",
+            "value": "taglist__container"
           },
           {
             "name": "Tag-list Title",
-            "value": "taglist_title"
+            "value": "taglist__title"
           },
           {
-            "name": "Tag-list Items",
-            "value": "taglist_items"
+            "name": "Tag-list Tags",
+            "value": "taglist__tags"
           }
         ]
       },
@@ -596,6 +600,18 @@
             "value": "pagination-container"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "klaviyo-script",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Klaviyo Style"
       }
     ]
   }
