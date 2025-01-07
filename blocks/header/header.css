@@ -12,31 +12,6 @@ header {
   width: unset !important;
 }
 
-.header-container>.cmp-container>.container:nth-child(3)>.cmp-container .button .cmp-button {
-  border-radius: unset;
-}
-
-.header-container>.cmp-container>.container:nth-child(3)>.cmp-container .button .cmp-button:hover {
-  background-color: unset;
-}
-
-.footer-container>.cmp-container>.container:nth-child(2)>.cmp-container>.container:nth-child(2) .cmp-button {
-  margin: 0;
-}
-
-.header-container>.cmp-container>.container:nth-child(2)>.cmp-container>.container:nth-child(2)>.cmp-container .button .cmp-button {
-  border-radius: unset;
-  color: var(--black);
-}
-
-.header-container>.cmp-container>.container:nth-child(2)>.cmp-container>.container:nth-child(2)>.cmp-container .button .cmp-button:hover {
-  background-color: unset;
-}
-
-/* .header-container>.cmp-container>.container:nth-child(2)>.cmp-container>.container:first-child>.cmp-container>.arbnavigation .cmp-navigation__item--level-0> a{
-  color: var(--black);
-} */
-
 @media screen and (width <=768px) {
   .header-container .image:first-child .cmp-image {
     max-width: 57px;
@@ -54,18 +29,17 @@ header {
 
 .breadcrumbs ol {
   display: flex;
-  margin: 0 16px;
 }
 
 .breadcrumbs ol li > a {
-  font-size: 14px;
+  font-size: var(--body-font-size-xxs);
   line-height: 24px;
   font-weight: 500;
   color: var(--dark-grey);
 }
 
 .breadcrumbs ol li:not(:last-child) a {
-  color: #000;
+  color: var(--black);
 }
 
 .breadcrumbs ol li:not(:last-child) a::after {
@@ -78,3 +52,9 @@ header {
 }
 
 /* breadcrumbs css end */
+
+@media screen and (width <= 768px) {
+  .breadcrumbs ol {
+    padding: 0 16px;
+  }
+}
