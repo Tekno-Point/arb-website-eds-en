@@ -5,7 +5,7 @@ export default async function decorate(block) {
   if (resp.ok) {
     let str = await resp.text();
     const { location } = window;
-    if (location.href.includes('localhost') || location.href.includes('main--')) {
+    if (location.href.includes('localhost') || location.href.includes('--arb-website-eds-en--')) {
       str = str.replaceAll(
         '/etc.clientlibs/',
         'https://publish-p144166-e1488019.adobeaemcloud.com/etc.clientlibs/',
@@ -20,7 +20,7 @@ export default async function decorate(block) {
     div.querySelectorAll('link').forEach((link) => {
       try {
         const newLink = document.createElement('link');
-        newLink.href = link.href;
+        newLink.href = link.href.replace('http://localhost:3000', 'https://publish-p144166-e1488019.adobeaemcloud.com');
         newLink.rel = 'stylesheet';
         document.head.append(newLink);
       } catch (error) {
