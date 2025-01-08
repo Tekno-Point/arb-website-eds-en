@@ -1,13 +1,10 @@
 // add delayed functionality here
-function loadHeadGTM() {
+function loadKlaviyoScript() {
   const scriptTag = document.createElement('script');
-
-  scriptTag.innerHTML = `type="text/javascript" async=""
-src="https://static.klaviyo.com/onsite/js/PUBLIC_API_KEY/klaviyo.js"`;
-
-  document.head.prepend(scriptTag);
+  scriptTag.type = 'text/javascript';
+  scriptTag.async = true;
+  scriptTag.src = 'https://static.klaviyo.com/onsite/js/RvcFeD/klaviyo.js';
+  document.body.append(scriptTag);
 }
 
-if (!window.location.hostname.includes('localhost') && !window.location.hostname.includes('author')) {
-  loadHeadGTM();
-}
+loadKlaviyoScript();

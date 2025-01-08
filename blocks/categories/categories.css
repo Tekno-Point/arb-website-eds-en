@@ -12,7 +12,7 @@
 
 .categories.categories-title h5 {
     font-size: var(--heading-font-size-m);
-    font-family: elza-semibold;
+    font-family: elza-semibold, sans-serif;
     line-height: 28px;
     font-weight: 600;
     color: var(--black);
@@ -31,7 +31,7 @@
 .categories.categories-list ul li span,
 .categories.categories-list ul li a {
     font-size: var(--body-font-size-xs);
-    font-family: elza-regular;
+    font-family: elza-regular, sans-serif;
     line-height: 24px;
     font-weight: 400;
 }

@@ -20,7 +20,7 @@
     height: 48px;
     width: 48px;
     font-size: var(--body-font-size-xs);
-    font-family: elza-regular;
+    font-family: elza-regular, sans-serif;
     line-height: 24px;
     font-weight: 400;
 }
