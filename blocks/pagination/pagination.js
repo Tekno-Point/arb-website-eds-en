@@ -92,11 +92,6 @@ function initPagination(element) {
   renderPagination();
 }
 export default function decorate(block) {
-  // <div class="carousel-container">
-  //       <div id="carousel" class="carousel">
-  //           <!-- Items will be dynamically inserted here -->
-  //       </div>
-  //   </div>
   block.innerHTML = `
     <div class="pagination">
         <button class="page-btn prev-btn" id="prevBtn"><img src="../../icons/pagi-next-arrow.svg"/></button>

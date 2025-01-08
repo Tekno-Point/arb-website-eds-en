@@ -39,9 +39,7 @@ export default async function decorate(block) {
           const newScript = document.createElement('script');
           newScript.src = link.src.replace('http://localhost:3000', 'https://publish-p144166-e1488019.adobeaemcloud.com');
           newScript.type = 'text/javascript';
-          // if (link.src.includes('localhost')) {
-          //   console.log('link.src :: ', newScript.src);
-          // }
+
           document.body.append(newScript);
         } catch (error) {
           console.error(error); // eslint-disable-line
@@ -57,8 +55,6 @@ export default async function decorate(block) {
       }, 1000);
     }
     window.isLast = true;
-    // Create the event
-    // block.innerHTML = str;
   }
   return block;
 }
