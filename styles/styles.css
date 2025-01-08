@@ -18,10 +18,6 @@
   --white: #FFF;
   --lavendar-wisp: #E9EBEE;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
   /* body sizes */
   --body-font-size-m: 22px;
   --body-font-size-s: 20px;
@@ -38,19 +34,6 @@
 
   /* nav height */
   --nav-height: 64px;
-}
-
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
 }
 
 @media (width >=900px) {

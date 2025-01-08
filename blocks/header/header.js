@@ -104,17 +104,6 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-/* function getDirectTextContent(menuItem) {
-  const menuLink = menuItem.querySelector(':scope > a');
-  if (menuLink) {
-    return menuLink.textContent.trim();
-  }
-  return Array.from(menuItem.childNodes)
-    .filter((n) => n.nodeType === Node.TEXT_NODE)
-    .map((n) => n.textContent)
-    .join(' ');
-} */
-
 async function buildBreadcrumbsFromNavTree() {
   const crumbs = [];
 
