@@ -94,9 +94,9 @@ function initPagination(element) {
 export default function decorate(block) {
   block.innerHTML = `
     <div class="pagination">
-        <button class="page-btn prev-btn" id="prevBtn"><img src="../../icons/pagi-next-arrow.svg"/></button>
+        <button class="page-btn prev-btn" id="prevBtn"><img src="../../icons/pagi-next-arrow.svg width="24" height="24"/></button>
         <div id="pageNumbers"></div>
-        <button class="page-btn next-btn" id="nextBtn"><img src="../../icons/pagi-next-arrow.svg"/></button>
+        <button class="page-btn next-btn" id="nextBtn"><img src="../../icons/pagi-next-arrow.svg" width="24" height="24"/></button>
     </div>
   `;
 
