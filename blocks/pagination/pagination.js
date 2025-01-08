@@ -7,23 +7,17 @@ function initPagination(element) {
   function renderItems() {
     const carousel = document.querySelectorAll('.blog-card');
     const startIndex = (currentPage - 1) * itemsPerPage;
-    // debugger;
     const endIndex = Math.min(startIndex + itemsPerPage, items.length);
 
     const itemsToShow = items.slice(startIndex, endIndex); // Get items for the current page
     carousel.forEach(function (el,index) {
-      // el.style.display = 'none';
       el.classList.add('blog-display-none');
       el.classList.remove('blog-display-flex');
     })
     itemsToShow.forEach(function (el,index) {
-      // el.style.display = 'flex';
       el.classList.add('blog-display-flex');
       el.classList.remove('blog-display-none');
     })
-    // carousel.innerHTML = itemsToShow
-    //   .map((item) => `<div class="carousel-item">${item}</div>`)
-    //   .join('');
   }
 
   function createEllipsis(container) {
