@@ -25,7 +25,10 @@
   --grey: #EBEBEB;
   --dark-grey: #454B58;
   --light-grey: #72747B;
+  --davy-grey: #555;
+  --ashy-blue: #9299A8;
   --white: #FFF;
+  --lavendar-wisp: #E9EBEE;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -168,7 +171,8 @@ a:any-link {
 
 a:hover {
   /* color: var(--link-hover-color); */
-  text-decoration: underline;
+
+  /* text-decoration: underline; */
 }
 
 /* buttons */

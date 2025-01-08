@@ -13,12 +13,16 @@
 .pagination .page-btn {
     padding: 5px 10px;
     border: none;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white);
+    color: var(--black);
     cursor: pointer;
     border-radius: 4px;
     height: 48px;
     width: 48px;
+    font-size: var(--body-font-size-xs);
+    font-family: elza-regular;
+    line-height: 24px;
+    font-weight: 400;
 }
 
 .pagination .page-btn img {
@@ -30,7 +34,7 @@
 }
 
 .pagination .page-btn.disabled {
-    background-color: #fff;
+    background-color: var(--white);
     cursor: not-allowed;
 }
 
@@ -44,13 +48,12 @@
 }
 
 .pagination .page-btn.active {
-    font-weight: bold;
-    background-color: #E9EBEE;
-    color: #000;
+    background-color: var(--lavendar-wisp);
+    color: var(--black);
     border: 1px solid #304F6C1A;
 }
 
 .pagination .ellipsis {
     padding: 5px 10px;
-    color: #555;
+    color: var(--davy-grey);
 }

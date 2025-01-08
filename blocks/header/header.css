@@ -33,6 +33,7 @@ header {
 
 .breadcrumbs ol li > a {
   font-size: var(--body-font-size-xxs);
+  font-family: elza-medium;
   line-height: 24px;
   font-weight: 500;
   color: var(--dark-grey);
@@ -47,14 +48,18 @@ header {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: #9299A8;
+  color: var(--ashy-blue);
   padding: 0 8px;
 }
 
-/* breadcrumbs css end */
-
 @media screen and (width <= 768px) {
+  .breadcrumbs {
+    padding-top: 16px;
+  }
+
   .breadcrumbs ol {
     padding: 0 16px;
   }
 }
+
+/* breadcrumbs css end */
