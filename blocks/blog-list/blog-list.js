@@ -17,7 +17,7 @@ export default async function decorate(block) {
       const imgSrc = window.location.href.includes(url.origin) ? eachData.image.replace('/content/dam/arb-blogs/', '/images/') : eachData.image;
       return div(
         { class: 'blog-card' },
-        div({ class: 'blog-card-img' }, img({ src: imgSrc })),
+        div({ class: 'blog-card-img' }, img({ src: imgSrc }, { alt: 'blog-list-img' })),
         div(
           { class: 'blog-card-content' },
           div(
