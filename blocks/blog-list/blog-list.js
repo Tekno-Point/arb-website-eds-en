@@ -9,7 +9,7 @@ export default async function decorate(block) {
   const list = await getQueryList();
   const path = url.pathname.replace('/', '');
   const items = list
-    .filter((eachList) => (!eachList.path.endsWith(path) && eachList.tag.includes(path)));
+    .filter((eachList) => (!eachList.path.endsWith(path) && eachList.tag?.includes(path)));
 
   block.querySelectorAll('.blog-card').forEach((element) => element.remove());
   block.firstElementChild.append(

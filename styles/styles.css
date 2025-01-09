@@ -203,7 +203,7 @@ main>.section:first-of-type {
 
 @media (width >=900px) {
   .section {
-    max-width: 1240px;
+    max-width: 1376px;
     margin: 0 auto;
   }
 }
