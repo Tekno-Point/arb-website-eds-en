@@ -1,8 +1,7 @@
 /* header css start */
 header {
   min-width: 100%;
-
-  /* min-height: 80px; */
+  height: 80px;
 }
 
 .header-container .image:first-child {
