@@ -5,6 +5,9 @@ const proxy = {
   queryList: '',
   list: '',
 };
+
+export const loadedAssets = [];
+
 export async function getQueryList() {
   if (proxy.queryList) {
     return proxy.queryList;
