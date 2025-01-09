@@ -8,11 +8,11 @@ export default async function decorate(block) {
     if (location.href.includes('localhost') || location.href.includes('--arb-website-eds-en--')) {
       str = str.replaceAll(
         '/etc.clientlibs/',
-        'https://author-p144166-e1487988.adobeaemcloud.com/etc.clientlibs/',
+        'https://publish-p144166-e1487988.adobeaemcloud.com/etc.clientlibs/',
       );
       str = str.replaceAll(
         '/content/',
-        'https://author-p144166-e1487988.adobeaemcloud.com/content/',
+        'https://publish-p144166-e1487988.adobeaemcloud.com/content/',
       );
     }
     const div = document.createElement('div');
@@ -20,7 +20,7 @@ export default async function decorate(block) {
     div.querySelectorAll('link').forEach((link) => {
       try {
         const newLink = document.createElement('link');
-        newLink.href = link.href.replace('http://localhost:3000', 'https://author-p144166-e1487988.adobeaemcloud.com');
+        newLink.href = link.href.replace('http://localhost:3000', 'https://publish-p144166-e1487988.adobeaemcloud.com');
         newLink.rel = 'stylesheet';
         document.head.append(newLink);
       } catch (error) {
@@ -37,7 +37,7 @@ export default async function decorate(block) {
       if (!exculdeLink.filter((clientLib) => link.src.includes(clientLib)).length) {
         try {
           const newScript = document.createElement('script');
-          newScript.src = link.src.replace('http://localhost:3000', 'https://author-p144166-e1487988.adobeaemcloud.com');
+          newScript.src = link.src.replace('http://localhost:3000', 'https://publish-p144166-e1487988.adobeaemcloud.com');
           newScript.type = 'text/javascript';
 
           document.body.append(newScript);
