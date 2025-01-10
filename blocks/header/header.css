@@ -30,6 +30,7 @@ header {
 
 .breadcrumbs ol {
   display: flex;
+  list-style: none;
 }
 
 .breadcrumbs ol li > a {
