@@ -61,3 +61,4 @@ export function article(...items) { return domEl('article', ...items); }
 export function strong(...items) { return domEl('strong', ...items); }
 export function select(...items) { return domEl('select', ...items); }
 export function option(...items) { return domEl('option', ...items); }
+export function script(...items) { return domEl('script', ...items); }
