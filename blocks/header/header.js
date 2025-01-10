@@ -1,5 +1,6 @@
 import { fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
 import { getQueryList } from '../../scripts/common.js';
+import { appendXF } from '../experience-fragment/experience-fragment.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
@@ -158,13 +159,17 @@ export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  const fragment = await loadFragment(navPath);
-
   block.textContent = '';
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     const section = document.querySelector('.section');
     section.prepend(await buildBreadcrumbs());
   }
+
+  if (navPath.includes('/experience-fragments/')) {
+    appendXF(block, navMeta);
+    return block;
+  }
+  const fragment = await loadFragment(navPath);
   if (navPath === '/nav') {
     block.append(fragment.firstElementChild);
     return block;

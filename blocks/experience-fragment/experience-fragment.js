@@ -1,6 +1,4 @@
-export default async function decorate(block) {
-  const xfPath = block.querySelector('a')?.href;
-  block.innerHTML = '';
+export async function appendXF(block, xfPath) {
   const resp = await fetch(xfPath);
   if (resp.ok) {
     let str = await resp.text();
@@ -57,4 +55,10 @@ export default async function decorate(block) {
     window.isLast = true;
   }
   return block;
+}
+
+export default async function decorate(block) {
+  const xfPath = block.querySelector('a')?.href;
+  block.innerHTML = '';
+  await appendXF(block, xfPath);
 }
