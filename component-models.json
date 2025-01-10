@@ -607,11 +607,24 @@
     "id": "klaviyo-script",
     "fields": [
       {
-        "component": "text",
+        "component": "multiselect",
         "valueType": "string",
         "name": "classes",
         "value": "",
-        "label": "Klaviyo Style"
+        "label": "Klaviyo Style",
+        "options": [
+          {
+            "name": "Klaviyo Container",
+            "value": "klaviyo-container"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "class-name",
+        "value": "",
+        "label": "Klaviyo Class"
       }
     ]
   }
