@@ -28,8 +28,8 @@ header {
 
 /* breadcrumbs css start */
 .breadcrumbs {
-  /* padding-top: 48px; */
   margin-top: 48px;
+  display: block;
 }
 
 .breadcrumbs ol {

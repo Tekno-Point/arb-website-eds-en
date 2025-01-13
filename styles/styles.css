@@ -63,6 +63,10 @@ header {
   display: none;
 }
 
+.breadcrumbs {
+  display: none;
+}
+
 main {
   margin-top: 0 !important;
   height: 100%;
