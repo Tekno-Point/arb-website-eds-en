@@ -7,6 +7,10 @@
   height: 344px;
 }
 
+.hero.hero-img picture img {
+  height: 344px;
+}
+
 @media screen and (width <=768px) {
   .section.hero-container:has(.hero.hero-img) {
     margin: 0;
@@ -16,7 +20,7 @@
     height: 269px;
   }
 
-  .hero.hero-img img {
+  .hero.hero-img picture img {
     height: 269px;
     object-fit: unset;
   }
