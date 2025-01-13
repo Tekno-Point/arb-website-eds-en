@@ -57,6 +57,8 @@ body {
   font-size: var(--body-font-size-m);
   line-height: 1.6;
   padding-top: 80px !important;
+  height: 100%;
+  width: 100%;
 }
 
 main {
