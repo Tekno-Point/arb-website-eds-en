@@ -1,5 +1,4 @@
-import { fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
-import { getQueryList } from '../../scripts/common.js';
+import { getMetadata } from '../../scripts/aem.js';
 import { appendXF } from '../experience-fragment/experience-fragment.js';
 import { loadFragment } from '../fragment/fragment.js';
 
@@ -105,52 +104,6 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-async function buildBreadcrumbsFromNavTree() {
-  const crumbs = [];
-
-  // const homeUrl = document.querySelector('.nav-brand a[href]').href;
-  const currentUrl = new URL(window.location.href);
-  const currentPath = currentUrl.pathname;
-  const queryList = await getQueryList();
-  const breadcrumbsList = queryList.filter((eachlist) => currentPath.includes(eachlist.path));
-  const placeholders = await fetchPlaceholders();
-  const homePlaceholder = placeholders.breadcrumbsHomeLabel || 'Home';
-  breadcrumbsList.sort((a, b) => a.path.split('/').length - b.path.split('/').length).forEach((link) => {
-    if (link.path === '/') {
-      crumbs.push({ title: homePlaceholder, url: link.path });
-    } else {
-      crumbs.push({ title: link.breadcrumbstitle, url: link.path });
-    }
-  });
-
-  return crumbs;
-}
-
-async function buildBreadcrumbs() {
-  const breadcrumbs = document.createElement('nav');
-  breadcrumbs.className = 'breadcrumbs';
-
-  const crumbs = await buildBreadcrumbsFromNavTree(document.querySelector('.nav-sections'), document.location.href);
-
-  const ol = document.createElement('ol');
-  ol.append(...crumbs.map((item) => {
-    const li = document.createElement('li');
-    if (item['aria-current']) li.setAttribute('aria-current', item['aria-current']);
-    if (item.url) {
-      const a = document.createElement('a');
-      a.href = item.url;
-      a.textContent = item.title;
-      li.append(a);
-    } else {
-      li.textContent = item.title;
-    }
-    return li;
-  }));
-
-  breadcrumbs.append(ol);
-  return breadcrumbs;
-}
-
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -160,10 +113,6 @@ export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   block.textContent = '';
-  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
-    const section = document.querySelector('.section');
-    section.prepend(await buildBreadcrumbs());
-  }
 
   if (navPath.includes('/experience-fragments/')) {
     appendXF(block, navMeta);
