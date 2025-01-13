@@ -4,17 +4,21 @@ header {
   height: 80px;
 }
 
-.header-container .image:first-child {
+.header.block {
+  height: 80px;
+}
+
+.experience-fragment.header-container .image:first-child {
   margin-bottom: 0;
 }
 
-.header-container .image:first-child .cmp-image {
+.experience-fragment.header-container .image:first-child .cmp-image {
   max-width: 95px;
   width: unset !important;
 }
 
 @media screen and (width <=768px) {
-  .header-container .image:first-child .cmp-image {
+  .experience-fragment.header-container .image:first-child .cmp-image {
     max-width: 57px;
     height: 32px !important;
   }
