@@ -63,10 +63,6 @@ header {
   display: none;
 }
 
-.breadcrumbs {
-  display: none;
-}
-
 main {
   margin-top: 0 !important;
   height: 100%;
@@ -365,3 +361,46 @@ main .section.highlight {
     flex-direction: column;
   }
 }
+
+/* breadcrumbs css start */
+.breadcrumbs {
+  margin-top: 48px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumbs ol li > a {
+  font-size: var(--body-font-size-xxs);
+  font-family: elza-medium, sans-serif;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--dark-grey);
+}
+
+.breadcrumbs ol li:not(:last-child) a {
+  color: var(--black);
+}
+
+.breadcrumbs ol li:not(:last-child) a::after {
+  content: "/";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--ashy-blue);
+  padding: 0 8px;
+}
+
+@media screen and (width <= 768px) {
+  .breadcrumbs {
+    padding-top: 16px;
+  }
+
+  .breadcrumbs ol {
+    padding: 0 16px;
+  }
+}
+
+/* breadcrumbs css end */

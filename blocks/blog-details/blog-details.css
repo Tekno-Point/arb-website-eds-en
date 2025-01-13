@@ -80,6 +80,7 @@
 
 .blog-details.blog-image picture img {
     padding-top: 32px;
+    height: 449px;
 }
 
 @media screen and (width <= 768px) {
@@ -89,5 +90,9 @@
       
     .section.width-40 > div:nth-child(2) {
         width: 100%;
+    }
+
+    .blog-details.blog-image picture img {
+        height: 361px;
     }
 }
